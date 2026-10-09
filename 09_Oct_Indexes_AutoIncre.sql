@@ -1,7 +1,5 @@
 -- Topics Covered:- Auto_Increment, CREATE INDEX, Show Index, Drop Index
 
-
-
 /* The  CREATE INDEX statement is used to create indexes in tables.
 Indexes are used to retrieve data from the databse more quickly than otherwise.
 The users cannot see the indexes, they are just used to speed up searches/queries.*/
