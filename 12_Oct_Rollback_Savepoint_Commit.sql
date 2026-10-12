@@ -5,9 +5,9 @@ START TRANSACTION -- To execute multiple statements as a single transaction,
 we must explicitly start the transaction.
 
 COMMIT:- Saves all changes made during the transaction.
-ROLLBACK:- Undoes all changes made during the transaction.
-SAVEPOINT:- Sets a Savepoint withiun a transaction to roll back to later 
-ROLLBACK To SAVEPOINT:- Rolls back to aspecific savepoint without affecting earlier changes. */
+ROLLBACK:- Undoes all changes made during the transaction.(Goes Till the Last Commit)
+SAVEPOINT:- Sets a Savepoint within a transaction to roll back to later 
+ROLLBACK To SAVEPOINT:- Rolls back to a specific savepoint without affecting earlier changes. (Adhichya Particular Savepoint Paryanta Jata)*/
 
 CREATE DATABASE TCL;
 USE TCL;
@@ -20,8 +20,9 @@ CREATE TABLE orders(
 DESC orders;
 
 -- Start the transaction --
-SET autocommit = 0; /* in MySQL auto commit mode is enabled by default which means whenever we execute any SQL statement
-is automatically commited/*
+SET autocommit = 0;  -- Here I am Disabling the AutoCommit  
+/* in MySQL auto commit mode is enabled by default which means whenever we execute any SQL statement
+it is automatically commited/*
 
 /* So in such cases succeded transactions are automatically commited.
 To diable the auto commit mode we are using this aslo we cannot disable the auto commit mode of DDL Commands.
